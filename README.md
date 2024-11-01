@@ -1,6 +1,6 @@
 # Portafolio John Berroa 🧑‍🚀
 
-![Portafolio Image](public\diseno_portafolio.jpg)
+![Portafolio Image](public/diseno_portafolio.jpg)
 
 ## Build
 
