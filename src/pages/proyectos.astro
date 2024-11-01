@@ -1,0 +1,74 @@
+---
+import { ViewTransitions} from 'astro:transitions';
+import Card from '../components/cardProyects.astro';
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyectos</title>
+    <ViewTransitions>
+</head>
+<body class="bg-secundary__black font-roboto text-white__text ">
+    <section  id="Proyectos-layaout">
+
+        <div class="w-full p-3  ">
+            <a transition:name="project" href="/"  class="text-8xl"><i class='bx bxl-codepen'></i></a>
+        </div>
+        
+        <div class="w-full flex justify-center">
+            <h1 class="text-5xl mb-3 uppercase font-gothic tracking-wider md:text-7xl">Proyectos</h1>
+        </div>
+
+        <div class="
+                flex flex-col  justify-center items-center gap-6 
+                xl:flex-row">
+
+            <Card
+                    title="Piccola Torta" 
+                    subtitle='Proyecto Real'
+                    icons={["bx bxl-html5", "bxl-css3","bx bxl-javascript", "bx bxl-tailwind-css", "bx bxl-firebase" ]}
+                    description="Cotizador de picaderas para eventos "
+                    imgSrc='/piccola-torta.jpg'
+                    href="https://piccola-torta.web.app/index.html";
+             />
+
+            <Card
+                    title="Evolve" 
+                    subtitle='Practica'
+                    icons={["bx bxl-html5", "bxl-css3","bx bxl-javascript", "bx bxl-tailwind-css",]}
+                    description="Landig para una barberia "
+                    imgSrc='/Evolve.jpg'
+                    href="https://dashing-scone-868014.netlify.app/";
+             />
+
+            <Card
+                    title="Bootis Tec" 
+                    subtitle='Practica '
+                    icons ={["bx bxl-html5", "bxl-css3","bx bxl-javascript"]}
+                    description="Landig para servicio tecnico "
+                    imgSrc='/Bootis-tec.jpg'
+                    href="https://charming-sorbet-061cc0.netlify.app/";
+             />
+
+            <Card
+                    title="Serenade" 
+                    subtitle='Practica'
+                    icons ={["bx bxl-html5", "bxl-css3","bx bxl-javascript"]}
+                    description="Landig para IA"
+                    imgSrc='/serenade.jpg'
+                    href="https://playful-kashata-de27b3.netlify.app";
+             />
+
+        </div>
+    </section>
+</body>
+</html>

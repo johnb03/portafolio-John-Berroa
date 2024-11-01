@@ -1,0 +1,102 @@
+---
+export interface Props {
+    title: string;
+    subtitle:string;
+    description:string;
+    imgSrc:string;
+    href:string;
+    icons:string[];
+}
+const {imgSrc,title,subtitle,description,href,icons}=    Astro.props
+---
+
+
+<div class="card-proyect">
+    <picture class="card__proyect-figure">
+        <a target="_blank" href={href}><img src={imgSrc} alt="image proyect"></a>
+    </picture>
+
+        <div class="card__proyect-footer">
+            <h2 class="card__proyect-title">{title}</h2>
+            <h3 class="card__proyect-subtitle">{subtitle} </h3>
+            <ul class="card__poryects-icon">
+                {icons.map(icon =>(
+                    <li><i class={`bx ${icon}`}></i></li>
+                ))}
+             </ul>
+            <div class="card__proyect-description">
+            <p class="card__proyect-body">{description}</p>
+            </div>
+        </div>
+</div>
+
+
+<style>
+  
+    .card-proyect{
+        width:18rem;
+        height: 30rem;
+        color: #f1f1f1;
+        padding: 8px;
+
+         border-radius: 21px;
+        background: #000814;
+        box-shadow:  7px 7px 3px #000308,
+             -7px -7px 3px #000d20;
+    }
+
+
+    .card__proyect-figure{
+        height: full;
+        margin:auto;
+        margin-bottom: 5px;
+        cursor: pointer;
+        img{
+            border-radius: 8px;
+        }
+    }
+    .card__proyect-footer{
+        border-radius: 5px;
+     
+    }
+
+
+    .card__proyect-title{
+        font-family: 'League Gothic', sans-serif;
+        font-size: 3rem;
+        text-align: center;
+        letter-spacing: 3px;
+      
+      
+    }
+
+    .card__proyect-subtitle{
+        font-size: 1.2rem;
+        text-align: center;
+        border-bottom: solid 1px #edfd5b;
+        width: 180px;
+        margin: auto;
+
+       
+    }
+
+    .card__poryects-icon{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: .3rem;
+        gap: .5rem;
+        max-height: 1rem;
+
+    }
+   
+    
+  
+
+    .card__proyect-body{
+        font-size: 1rem;
+        text-wrap: wrap;
+        padding: 1rem;
+    }
+</style>
+
