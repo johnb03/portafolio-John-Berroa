@@ -1,6 +1,5 @@
 ---
 import { ViewTransitions} from 'astro:transitions';
-import Layout from '../layouts/Layout.astro';
 import Button from '../components/Button.astro';
 ---
 
@@ -70,7 +69,7 @@ box-shadow: inset 7px 7px 3px #000308,
 		  <div class="md:w-[18rem] min-h[18rem]  relative ">
 			<picture class=" ">
 			<img class="w-full h-auto rounded-3xl  lg:absolute bottom-0" 
-					srcset="/john_berroa.png 2x, /john_berroa-mobile.png 1x " 
+					srcset="dist/john_berroa.png 2x, / dist/john_berroa-mobile.png 1x " 
 					alt="John Berroa ">
 			</picture>
 		  </div>
@@ -83,7 +82,7 @@ box-shadow: inset 7px 7px 3px #000308,
 				<p  class=" min-[320px]:h-auto  text-[1.5rem] text-balance
 								md:min-w-[23rem] min-[768px]:h-76" >
 					<span class="font-gothic font-thin  text-4xl tracking-wider text-primary__yellow ">John Berroa </span>
-					  <img  class="w-8 h-auto rounded-full inline-block mb-2 mr-4" src="/1.jpg" alt="logo job"> 
+					  <img  class="w-8 h-auto rounded-full inline-block mb-2 mr-4" src="dist/1.jpg" alt="logo job"> 
 					   👍 Soy  front-end devolver en proceso, enfocado en desarrollar productos
 					   digitales de alta calidad. <span class="hidden md:block">Que satisfagan las necesidades reales de los clientes.</span>
 				</p>
@@ -99,14 +98,14 @@ box-shadow: inset 7px 7px 3px #000308,
 		    items-center p-4 relative overflow-hidden
 		  ">
 		  <div class="absolute top-0 left-0 w-full h-full opacity-50 ">
-			<video src="/bg-video.mp4" loop autoplay></video>
+			<video src="dist/bg-video.mp4"  autoplay loop="true"></video>
 		  </div>
 
 		  <div class="flex flex-col justify-center items-center h-80  z-10">
 			
 			<h2 class="text-6xl text-opacity-40xl font-gothic tracking-wide uppercase mb-1
 			md:text-6xl">Proyectos</h2>
-				<a transition:name="project"  href="/proyectos" class="text-6xl hover:cursor-pointer  
+				<a transition:name="project"  href="/proyectos.astro" class="text-6xl hover:cursor-pointer  
 				 " >
 					<i class='bx bxl-codepen'></i></a>
 		  </div>
