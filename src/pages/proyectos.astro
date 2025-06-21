@@ -2,6 +2,7 @@
 import { ViewTransitions} from 'astro:transitions';
 import Card from '../components/cardProyects.astro';
 
+
 ---
 
 <!DOCTYPE html>
@@ -20,9 +21,18 @@ import Card from '../components/cardProyects.astro';
 <body class="bg-secundary__black font-roboto text-white__text ">
     <section  id="Proyectos-layaout">
 
-        <div class="w-full p-3  ">
-            <a transition:name="project" href="/portafolio-John-Berroa"  class="text-8xl"><i class='bx bxl-codepen'></i></a>
+        
+          <div  class="w-full p-3"  >
+              <button 
+              class=" pt-2 pb-2 pl-10 pr-10
+              bg-primary__yellow rounded-2xl
+              text-secundary__black shadow-lg 
+		 	 font-semibold  active:scale-[0.8] ">
+              <a transition:name="project" href="/portafolio-John-Berroa"  class="text-8xl"><i class='bx bxl-codepen'></i></a>
+            </button>
         </div>
+        
+      
         
         <div class="w-full flex justify-center">
             <h1 class="text-5xl mb-3 uppercase font-gothic tracking-wider md:text-7xl">Proyectos</h1>

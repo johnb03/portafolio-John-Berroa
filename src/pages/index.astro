@@ -12,6 +12,8 @@ import Button from '../components/Button.astro';
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<!-- <script  type="module" src="/src/js/app.js"></script> -->
+
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Portafolio John Berroa</title>
@@ -69,7 +71,7 @@ box-shadow: inset 7px 7px 3px #000308,
 		  <div class="md:w-[18rem] min-h[18rem]  relative ">
 			<picture class=" ">
 			<img class="w-full h-auto rounded-3xl  lg:absolute bottom-0" 
-					srcset="/portafolio-John-Berroa/john_berroa.png 2x, /portafolio-John-Berroa/john_berroa-mobile.png 1x " 
+					srcset="/portafolio-John-Berroa/John-Berroa.png 2x, /portafolio-John-Berroa/john_berroa-mobile.png 1x " 
 					alt="John Berroa ">
 			</picture>
 		  </div>
@@ -82,7 +84,6 @@ box-shadow: inset 7px 7px 3px #000308,
 				<p  class=" min-[320px]:h-auto  text-[1.5rem] text-balance
 								md:min-w-[23rem] min-[768px]:h-76" >
 					<span class="font-gothic font-thin  text-4xl tracking-wider text-primary__yellow ">John Berroa </span>
-					  <img  class="w-8 h-auto rounded-full inline-block mb-2 mr-4" src="/portafolio-John-Berroa/1.jpg" alt="logo job"> 
 					   👍 Soy  front-end devolver en proceso, enfocado en desarrollar productos
 					   digitales de alta calidad. <span class="hidden md:block">Que satisfagan las necesidades reales de los clientes.</span>
 				</p>
@@ -91,13 +92,14 @@ box-shadow: inset 7px 7px 3px #000308,
 		 </div>
 
 		<!-- user proyect -->
-		  <div class="
+		  <div   class="
+		  	hover:cursor-pointer
 		 	min-h-52
 		   nemp md:col-span-2
 		   flex flex-col justify-center gap-2 
 		    items-center p-4 relative overflow-hidden
 		  ">
-		  <div class="absolute top-0 left-0 w-full h-full opacity-50 ">
+		  <div  class="absolute top-0 left-0 w-full h-full opacity-50 ">
 			<video src="/portafolio-John-Berroa/bg-video.mp4"  autoplay muted loop ></video>
 		  </div>
 
@@ -105,9 +107,19 @@ box-shadow: inset 7px 7px 3px #000308,
 			
 			<h2 class="text-6xl text-opacity-40xl font-gothic tracking-wide uppercase mb-1
 			md:text-6xl">Proyectos</h2>
-				<a transition:name="project"  href="/portafolio-John-Berroa/proyectos" class="text-6xl hover:cursor-pointer  
-				 " >
-					<i class='bx bxl-codepen'></i></a>
+				<button
+				  class=" pt-2 pb-2 pl-10 pr-10
+             	 bg-primary__yellow rounded-2xl
+            	  text-secundary__black shadow-lg 
+		 		 font-semibold  active:scale-[0.8] ">
+				<a transition:name="project"  
+				href="/portafolio-John-Berroa/proyectos" 
+				class="text-6xl hover:cursor-pointer   " >
+				<i class='bx bxl-codepen'></i></a>
+					</button>	
+					
+
+				
 		  </div>
 
 		  </div>
