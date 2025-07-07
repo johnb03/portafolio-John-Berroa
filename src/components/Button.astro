@@ -1,15 +1,15 @@
 ---
 
-const {href, title,icon} = Astro.props
+const {href, title,icon, alabel} = Astro.props
 
 ---
 
 
 
-<button class=" pt-2 pb-2 pl-10 pr-10
+<button aria-label={alabel} class=" pt-2 pb-2 pl-10 pr-10
 			 bg-primary__yellow rounded-2xl
 			 text-secundary__black shadow-lg 
-		 	 font-semibold  active:scale-[0.8] ">
+		 	 font-semibold  active:scale-[0.8] " >
     <a target="_blank" href={href}>{title} <i class={icon}></i></a>
 <button/>
 
