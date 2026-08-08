@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+	post: CollectionEntry<'blog'>;
+}
+
+const { post } = Astro.props;
+const { title, description, date, image } = post.data;
+const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+const imageSrc = image ? `${BASE}${image.replace(/^\//, '')}` : null;
+const formatted = new Intl.DateTimeFormat('es', { dateStyle: 'long' }).format(date);
+---
+
+<a class="card" href={`${BASE}blog/${post.id}`}>
+	{imageSrc && (
+		<figure class="card__figure">
+			<img class="card__image card__image--blog" src={imageSrc} alt={title} loading="lazy" />
+		</figure>
+	)}
+	<div class="card__body">
+		<div>
+			<h3 class="card__title">{title}</h3>
+			<p class="card__subtitle">{formatted}</p>
+		</div>
+	</div>
+	<p class="card__description">{description}</p>
+</a>

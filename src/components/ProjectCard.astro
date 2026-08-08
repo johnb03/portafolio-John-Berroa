@@ -1,0 +1,35 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+	project: Project;
+}
+
+const { project } = Astro.props;
+const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+const cardClass = project.full ? 'card card--full' : 'card';
+---
+
+<a class={cardClass} href={`${BASE}proyectos/${project.slug}`}>
+	<figure class="card__figure">
+		<img
+			class="card__image"
+			src={project.image}
+			alt={project.title}
+			loading="lazy"
+			transition:name={`project-${project.slug}`}
+		/>
+	</figure>
+	<div class="card__body">
+		<div>
+			<h3 class="card__title">{project.title}</h3>
+			<p class="card__subtitle">{project.subtitle}</p>
+		</div>
+		<span class="card__arrow" aria-hidden="true">
+			<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+				<line x1="5" y1="12" x2="19" y2="12"></line>
+				<polyline points="12 5 19 12 12 19"></polyline>
+			</svg>
+		</span>
+	</div>
+</a>

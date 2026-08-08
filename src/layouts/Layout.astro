@@ -1,51 +1,82 @@
 ---
+import { ClientRouter } from 'astro:transitions';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	description = 'Portafolio de John Berroa — Product Engineer & Frontend / UX/UI Developer',
+} = Astro.props;
+
 const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
 ---
 
 <!doctype html>
-<html lang="en">
- 	<head>
- 		<meta charset="UTF-8" />
- 		<meta name="description" content="Astro description" />
- 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href={BASE + 'favicon.ico'} />
- 		<meta name="generator" content={Astro.generator} />
- 		<title>{title}</title>
- 	</head>
- 	<body>
- 		<slot />
- 	</body>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" href={`${BASE}favicon.ico`} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>{title}</title>
+		<ClientRouter />
+	</head>
+	<body id="top">
+		<Nav />
+		<slot />
+		<Footer />
+
+		<div id="loader" class="loader" transition:persist="loader" aria-hidden="true">
+			<img
+				class="loader__img"
+				src={`${BASE}assets/img/img-carga-animated.jpg`}
+				alt=""
+			/>
+			<div class="loader__track">
+				<div id="loader-bar" class="loader__bar" role="progressbar" aria-label="Cargando portafolio"></div>
+			</div>
+		</div>
+
+		<script is:inline>
+			(function () {
+				const loader = document.getElementById('loader');
+				const bar = document.getElementById('loader-bar');
+				if (!loader || !bar) return;
+
+				if (sessionStorage.getItem('portfolio-loader-shown')) {
+					loader.classList.add('loader--hidden');
+					return;
+				}
+				sessionStorage.setItem('portfolio-loader-shown', '1');
+
+				const DURATION = 5000;
+				const startedAt = Date.now();
+				let progress = 0;
+				const timer = setInterval(() => {
+					const elapsed = Date.now() - startedAt;
+					const target = Math.min((elapsed / DURATION) * 100, 100);
+					progress = Math.min(Math.max(target + Math.random() * 4 - 2, 0), 100);
+					bar.style.width = `${progress}%`;
+					if (progress >= 100) {
+						clearInterval(timer);
+						loader.classList.add('loader--done');
+						setTimeout(() => loader.classList.add('loader--hidden'), 600);
+					}
+				}, 200);
+			})();
+		</script>
+	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>

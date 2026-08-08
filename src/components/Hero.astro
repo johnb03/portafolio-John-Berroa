@@ -1,0 +1,25 @@
+---
+const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+---
+
+<section class="container hero" aria-label="Presentación">
+	<div class="hero__content">
+		<span class="hero__badge">
+			<span class="hero__badge-icon" aria-hidden="true"></span>
+			Available for new opportunities
+		</span>
+		<h1 class="hero__title">
+			Product Engineer<br />
+			Frontend &amp; UX/UI Developer
+		</h1>
+		<p class="hero__intro">
+			“Desarrollador enfocado en construir productos web funcionales y atractivos. Combino
+			diseño UX/UI en Figma, maquetación y lógica frontend (HTML, CSS, JS) con integración de
+			herramientas de IA. Cuento con visión comercial y habilidades de comunicación para
+			entender los requerimientos del negocio y traducirlos en software.”
+		</p>
+	</div>
+	<figure class="hero__figure">
+		<img src={`${BASE}Hero-design.png`} alt="Foto de perfil de John Berroa" />
+	</figure>
+</section>

@@ -1,20 +1,18 @@
 ---
+interface Props {
+	href?: string;
+	label: string;
+	variant?: 'primary' | 'ghost';
+	target?: string;
+}
 
-const {href, title,icon, alabel} = Astro.props
-
+const { href = '#', label, variant = 'primary', target } = Astro.props;
 ---
 
-
-
-<button aria-label={alabel} class=" pt-2 pb-2 pl-10 pr-10
-			 bg-primary__yellow rounded-2xl
-			 text-secundary__black shadow-lg 
-		 	 font-semibold  active:scale-[0.8] " >
-    <a target="_blank" href={href}>{title} <i class={icon}></i></a>
-<button/>
-
-
-
-
-    
-  
+<a
+	class={`btn btn--${variant}`}
+	href={href}
+	target={target}
+	rel={target === '_blank' ? 'noopener' : undefined}
+	>{label}</a
+>

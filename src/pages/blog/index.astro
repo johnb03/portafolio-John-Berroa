@@ -1,0 +1,18 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import BlogCard from '../../components/BlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+
+<Layout title="Blog">
+	<main class="container blog">
+		<h1 class="blog__title">Blog</h1>
+		<div class="blog__grid">
+			{posts.map((post) => <BlogCard post={post} />)}
+		</div>
+	</main>
+</Layout>

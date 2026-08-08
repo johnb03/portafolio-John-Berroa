@@ -1,0 +1,21 @@
+---
+import ProjectCard from './ProjectCard.astro';
+import { projects } from '../data/projects';
+
+const production = projects.filter((project) => project.full);
+const practice = projects.filter((project) => !project.full);
+---
+
+<section class="container projects" id="proyectos" aria-label="Proyectos de producción">
+	<h2 class="projects__title">Proyectos de producción</h2>
+	<div class="projects__grid">
+		{production.map((project) => <ProjectCard project={project} />)}
+	</div>
+</section>
+
+<section class="container projects" aria-label="Proyectos de prácticas">
+	<h2 class="projects__title">Proyectos de prácticas</h2>
+	<div class="projects__grid">
+		{practice.map((project) => <ProjectCard project={project} />)}
+	</div>
+</section>

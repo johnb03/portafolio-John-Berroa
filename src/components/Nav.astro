@@ -1,0 +1,17 @@
+---
+import Button from './Button.astro';
+
+const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+---
+
+<header class="container nav">
+	<a class="nav__logo" href={`${BASE}`}>
+		<img src={`${BASE}logo-johnberroa.svg`} alt="John Berroa" />
+	</a>
+	<img class="nav__avatar" src={`${BASE}Hero-design.png`} alt="John Berroa" />
+	<nav class="nav__actions" aria-label="Navegación principal">
+		<a class="nav__link" href={`${BASE}blog`}>Blog</a>
+		<Button label="Contacto" href="mailto:johnbdesing@gmail.com" variant="primary" />
+		<Button label="Resume" href={`${BASE}assets/pdf/resume-john-berroa.pdf`} target="_blank" variant="primary" />
+	</nav>
+</header>

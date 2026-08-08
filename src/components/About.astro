@@ -1,0 +1,18 @@
+---
+const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+---
+
+<section class="about" id="about" aria-label="Sobre mí">
+	<div class="container">
+		<hr class="about__divider" />
+		<h2 class="about__title">About</h2>
+		<div class="about__grid">
+			<p class="about__text">
+      Soy estudiante de ingenieria de software, hago esto por pasion, me gustan los retos y los detalles armados con especificidad visual, mi expperiencia en otrass areas me a permitido disernir y entender que las empresas nececitan resultados no pinturas decorativas, problemas que resolver  ayudan a la rentabilidad, <br/> Progrecemos  juntos.	
+			</p>
+			<figure class="about__figure">
+				<img src={`${BASE}footer-image.png`} alt="Sobre John Berroa" loading="lazy" />
+			</figure>
+		</div>
+	</div>
+</section>

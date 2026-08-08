@@ -1,0 +1,29 @@
+---
+import Button from './Button.astro';
+
+const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+---
+
+<footer>
+	<section class="container cta" aria-label="Contacto">
+		<h2 class="cta__title">
+			“Gracias por tu tiempo,<br />
+			si tienes una idea en mente, hablemos..”
+		</h2>
+		<Button label="Contact" href="#" variant="primary" />
+	</section>
+	<div class="container footer">
+		<div class="footer__row">
+			<div class="footer__copy">
+				<span>©2023</span>
+				<img class="footer__logo" src={`${BASE}logo-johnberroa.svg`} alt="John Berroa" />
+			</div>
+			<ul class="footer__socials">
+				<li><a href="#">X</a></li>
+				<li><a href="https://www.linkedin.com/in/john-ernesto-berroa-marten-bb14789a/">LinkedIn</a></li>
+				<li><a href="https://www.instagram.com/j.e.berroa/?hl=es">Instagram</a></li>
+			</ul>
+			<a class="footer__back" href="#top">Back to top</a>
+		</div>
+	</div>
+</footer>
