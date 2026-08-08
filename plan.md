@@ -18,13 +18,13 @@ Ver `style.md`. Resumen: fondo `#020202`, acento `#FFCC00`, texto `#FFFFFF`, sup
 
 ## Rutas
 
-| Ruta | Archivo | Contenido |
-|---|---|---|
-| `/` | `src/pages/index.astro` | Hero + Proyectos + About |
-| `/proyectos/[slug]` | `src/pages/proyectos/[slug].astro` | Página por proyecto (getStaticPaths) |
-| `/blog` | `src/pages/blog/index.astro` | Lista de posts |
-| `/blog/[slug]` | `src/pages/blog/[slug].astro` | Post individual |
-| `/proyectos` | `src/pages/proyectos.astro` | **Vieja, se conserva intacta** (a fusionar más adelante) |
+| Ruta                | Archivo                            | Contenido                                                |
+| ------------------- | ---------------------------------- | -------------------------------------------------------- |
+| `/`                 | `src/pages/index.astro`            | Hero + Proyectos + About                                 |
+| `/proyectos/[slug]` | `src/pages/proyectos/[slug].astro` | Página por proyecto (getStaticPaths)                     |
+| `/blog`             | `src/pages/blog/index.astro`       | Lista de posts                                           |
+| `/blog/[slug]`      | `src/pages/blog/[slug].astro`      | Post individual                                          |
+| `/proyectos`        | `src/pages/proyectos.astro`        | **Vieja, se conserva intacta** (a fusionar más adelante) |
 
 ## Datos
 
@@ -64,3 +64,4 @@ Ver `style.md`. Resumen: fondo `#020202`, acento `#FFCC00`, texto `#FFFFFF`, sup
 - Proyectos: `src/data/projects.ts`
 - Posts del blog: `src/content/blog/*.md`
 - Enlaces externos: buscar `href="#"` en `Nav.astro`, `Footer.astro`, `Button.astro`
+- todo excelente
