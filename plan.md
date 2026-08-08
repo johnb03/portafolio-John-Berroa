@@ -64,4 +64,4 @@ Ver `style.md`. Resumen: fondo `#020202`, acento `#FFCC00`, texto `#FFFFFF`, sup
 - Proyectos: `src/data/projects.ts`
 - Posts del blog: `src/content/blog/*.md`
 - Enlaces externos: buscar `href="#"` en `Nav.astro`, `Footer.astro`, `Button.astro`
-- todo excelente
+- todo excelente y corregido
