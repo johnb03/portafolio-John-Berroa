@@ -188,7 +188,9 @@ h3 {
   gap: 3rem;
   padding-block: 4rem var(--section-gap);
 }
-
+.hero__text-word {
+  color: var(--color-accent);
+}
 .hero__badge {
   display: inline-flex;
   align-items: center;
@@ -411,7 +413,8 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: clamp(3rem, 12vh, 7rem);
   gap: 2.5rem;
   background: var(--color-bg);
   transition: opacity 0.5s ease;
@@ -427,9 +430,27 @@ h3 {
 }
 
 .loader__img {
-  width: min(320px, 60vw);
+  width: min(420px, 78vw);
   height: auto;
-  border-radius: 50%;
+  aspect-ratio: 875 / 399;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  /* Efecto de escritura: silueta blanca revelada de izquierda a derecha,
+     con borde suave de "pluma", independiente de la barra de progreso. */
+  mask: linear-gradient(90deg, #000 40%, transparent 60%);
+  mask-size: 250% 100%;
+  mask-repeat: no-repeat;
+  mask-position: 100% 0;
+  animation: loader-write 4s ease forwards;
+}
+
+@keyframes loader-write {
+  from {
+    mask-position: 100% 0;
+  }
+  to {
+    mask-position: 0 0;
+  }
 }
 
 .loader__track {

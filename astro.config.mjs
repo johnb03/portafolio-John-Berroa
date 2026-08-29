@@ -5,5 +5,7 @@ import vue from '@astrojs/vue';
 export default defineConfig({
   integrations: [vue()],
   site: 'https://johnb03.github.io',
-  base: '/portafolio-John-Berroa',
+  // Dev corre en la raíz (evita el error de public/ sin base del navegador);
+  // build/preview mantiene el base para GitHub Pages.
+  base: import.meta.env.PROD ? '/portafolio-John-Berroa' : '/',
 });
