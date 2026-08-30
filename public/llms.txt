@@ -1,0 +1,25 @@
+# John Berroa — Frontend & UX/UI Developer
+
+> Portafolio personal de John Berroa: diseño UX/UI y desarrollo frontend (HTML/CSS/JS, Astro, Vue, Figma) con proyectos web reales y artículos de blog. Sitio en español.
+
+## Key Facts
+- Perfil: Frontend & UX/UI Developer — diseño UX/UI en Figma y desarrollo frontend.
+- Stack: HTML, CSS, JavaScript, Astro, Vue, Figma.
+- Proyectos reales: gastronomía (Santo Domingo), barbería (Los Ángeles), seguridad tecnológica, blockchain + IA, e-liquids mayorista.
+- Blog: artículos sobre desarrollo frontend, experiencia de usuario y diseño web.
+
+## Projects
+- [Piccola Torta](https://johnb03.github.io/portafolio-John-Berroa/proyectos/piccola-torta/): sitio para negocio de picaderas artesanales y empanadas a domicilio en Santo Domingo; catálogo, calculadora de presupuesto y pedidos por WhatsApp.
+- [Evolve](https://johnb03.github.io/portafolio-John-Berroa/proyectos/evolve/): landing para barbería en Los Ángeles con servicios, precios, horarios y reserva.
+- [Bootis Tec](https://johnb03.github.io/portafolio-John-Berroa/proyectos/bootis-tec/): sitio corporativo de sistemas de seguridad (cámaras, alarmas, control de acceso, intercom, puertas).
+- [Serenade](https://johnb03.github.io/portafolio-John-Berroa/proyectos/serenade/): landing de proyecto blockchain Serendale.AI — red de 120K TPS con seguridad basada en IA.
+- [Ice Juices](https://johnb03.github.io/portafolio-John-Berroa/proyectos/ice-juices/): sitio de marca de e-liquids premium con verificación de edad, catálogo y canal mayorista.
+
+## Blog
+- [Blog](https://johnb03.github.io/portafolio-John-Berroa/blog/): artículos sobre desarrollo frontend, UX/UI y diseño web.
+
+## Contact
+- [Portafolio](https://johnb03.github.io/portafolio-John-Berroa/): sección de contacto con redes (correo pendiente de publicar).
+
+## Note
+- Este archivo se sirve en `https://johnb03.github.io/portafolio-John-Berroa/llms.txt`, una subruta del dominio (GitHub Pages de proyecto). La spec de llms.txt lo ubica en la raíz del dominio; en este caso la raíz del sitio corresponde a esa subruta.

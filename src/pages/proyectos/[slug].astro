@@ -12,9 +12,22 @@ export function getStaticPaths() {
 
 const { project } = Astro.props;
 const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
+const projectURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
-<Layout title={project.title} description={project.subtitle}>
+<Layout
+	title={project.title}
+	description={project.subtitle || project.description}
+	jsonLd={{
+		'@context': 'https://schema.org',
+		'@type': 'CreativeWork',
+		name: project.title,
+		description: project.subtitle || project.description,
+		url: projectURL.href,
+		image: new URL(project.image, Astro.site).href,
+		author: { '@type': 'Person', name: 'John Berroa' },
+	}}
+>
 	<main class="container project-detail">
 		<a class="back-link" href={`${BASE}`}>
 			<svg

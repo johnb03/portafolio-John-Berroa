@@ -3,9 +3,32 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ProjectsSection from '../components/ProjectsSection.astro';
 import About from '../components/About.astro';
+
+const SITE = 'https://johnb03.github.io';
+const BASE = (import.meta.env.BASE_URL || '/').replace(/\/?$/, '/');
 ---
 
-<Layout title="Portafolio John Berroa">
+<Layout
+	title="John Berroa — Frontend & UX/UI Developer"
+	description="Portafolio de John Berroa: proyectos web reales de pastelería, barbería, seguridad, blockchain y e-liquids; diseño UX/UI en Figma y desarrollo frontend con HTML/CSS/JS, Astro y Vue."
+	jsonLd={[
+		{
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'John Berroa',
+			url: `${SITE}${BASE}`,
+		},
+		{
+			'@context': 'https://schema.org',
+			'@type': 'Person',
+			name: 'John Berroa',
+			url: `${SITE}${BASE}`,
+			jobTitle: 'Frontend & UX/UI Developer',
+			image: `${SITE}${BASE}og-card.png`,
+			knowsAbout: ['UX/UI design', 'Figma', 'Frontend', 'HTML', 'CSS', 'JavaScript', 'Astro', 'Vue'],
+		},
+	]}
+>
 	<main>
 		<Hero />
 		<ProjectsSection />

@@ -1,0 +1,42 @@
+# John Berroa — Frontend & UX/UI Developer
+
+> Guía extendida del portafolio personal de John Berroa: diseño UX/UI, desarrollo frontend y proyectos web reales. Este archivo acompaña a `llms.txt` con más contexto para agentes de IA.
+
+## Profile
+- **Perfil**: Frontend & UX/UI Developer.
+- **Enfoque**: diseño de interfaz y experiencia en Figma, y desarrollo frontend con HTML, CSS y JavaScript modernos, Astro y Vue.
+- **Idioma del sitio**: español (es_AR). Los proyectos y artículos pueden referenciar clientes en inglés.
+
+## Skills
+- Diseño UX/UI: wireframes, prototipos, design systems, componentes en Figma.
+- Frontend: HTML semántico, CSS (flexbox/grid, variables, animaciones), JavaScript (ES2020+), Astro (islas, Server Islands), Vue (Composition API).
+- Herramientas: Git/GitHub, GitHub Actions (CI/CD sobre GitHub Pages), SEO técnico, rendimiento web.
+
+## Work Process
+- Cada proyecto del portafolio se diseña primero en Figma y luego se desarrolla como sitio estático.
+- Metodología de trabajo: diseño guiado por problemas del negocio, no por tendencias; foco en tipografía y jerarquía visual.
+
+## Projects
+1. **Piccola Torta** — `https://johnb03.github.io/portafolio-John-Berroa/proyectos/piccola-torta/`
+   Sitio para negocio de picaderas artesanales y empanadas a domicilio en Santo Domingo (Rep. Dominicana). Incluye catálogo por porciones (6 a 100 unidades), calculadora de presupuesto con combos y cierre de pedido por WhatsApp. UX/UI en Figma; desarrollo HTML/CSS/JS.
+2. **Evolve** — `https://johnb03.github.io/portafolio-John-Berroa/proyectos/evolve/`
+   Landing para barber studio «Evolve The Way You Think» en Los Ángeles: presentación del maestro barbero, servicios con precios (corte $80, lineup $65, corte con barba $75, visitas a domicilio $250), horarios y llamada a acción de reserva.
+3. **Bootis Tec** — `https://johnb03.github.io/portafolio-John-Berroa/proyectos/bootis-tec/`
+   Sitio corporativo de tecnología de seguridad: cámaras de seguridad, alarmas inteligentes, control de acceso, intercom y puertas de seguridad para proteger edificios, coches y locales.
+4. **Serenade (Serendale.AI)** — `https://johnb03.github.io/portafolio-John-Berroa/proyectos/serenade/`
+   Landing de proyecto blockchain: red escalable de 120K TPS con seguridad de datos basada en IA, consenso Proof of State, smart contracts, hoja de ruta y whitepaper.
+5. **Ice Juices** — `https://johnb03.github.io/portafolio-John-Berroa/proyectos/ice-juices/`
+   Sitio de marca de e-liquids premium para vapeo: verificación de edad, catálogo de sabores (Mint, Pear Mint, Pear, Pina Colada), localizador de tiendas, sección mayorista B2B y contacto comercial.
+
+## Blog
+- Índice: `https://johnb03.github.io/portafolio-John-Berroa/blog/`
+- Artículos sobre desarrollo frontend, UX/UI, diseño web y buenas prácticas (publicados con fecha en el blog del portafolio).
+
+## Contact
+- Portafolio: `https://johnb03.github.io/portafolio-John-Berroa/` (sección de contacto con redes).
+- Correo electrónico: pendiente de publicación (a solicitud del autor).
+
+## Technical Notes
+- Sitio estático generado con Astro; base de despliegue `/portafolio-John-Berroa/` (GitHub Pages, rama main + workflow de Actions).
+- Sitemap: `https://johnb03.github.io/portafolio-John-Berroa/sitemap-index.xml`
+- Este archivo se sirve en la subruta del proyecto (`/portafolio-John-Berroa/llms-full.txt`), no en la raíz del dominio.
