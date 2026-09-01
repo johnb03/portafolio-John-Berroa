@@ -1,0 +1,43 @@
+backend:
+  name: github
+  repo: johnb03/portafolio-John-Berroa
+  branch: main
+  base_url: https://decap-proxy.jonhebm.workers.dev
+
+site_url: https://johnb03.github.io/portafolio-John-Berroa
+display_url: https://johnb03.github.io/portafolio-John-Berroa
+
+# Decap sube los archivos a public/images/blog (media_folder).
+# El valor que guarda en el frontmatter/markdown es public_folder (/images/blog
+# es root-absolute); el plugin satteri-base-image le antepone la base del sitio
+# en el build, y BlogCard ya antepone la base a la imagen del frontmatter.
+media_folder: public/images/blog
+public_folder: /images/blog
+
+collections:
+  - name: blog
+    label: Blog
+    folder: src/content/blog
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    path: "{{slug}}"
+    extension: md
+    fields:
+      - { name: title, label: Título, widget: string }
+      - { name: description, label: Descripción, widget: text }
+      - {
+          name: date,
+          label: Fecha,
+          widget: datetime,
+          date_format: YYYY-MM-DD,
+          time_format: false,
+          format: YYYY-MM-DD,
+        }
+      - {
+          name: image,
+          label: Imagen de portada,
+          widget: image,
+          required: false,
+        }
+      - { name: body, label: Contenido, widget: markdown }
